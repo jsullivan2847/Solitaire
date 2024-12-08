@@ -1,0 +1,131 @@
+[gd_scene load_steps=4 format=3 uid="uid://b57gvbqdw0rqm"]
+
+[ext_resource type="Script" path="res://Scenes/StartMenu/StartMenu.gd" id="1_7xpsj"]
+[ext_resource type="Theme" uid="uid://f1vv4pwdptso" path="res://Themes/Title.tres" id="2_qoafn"]
+[ext_resource type="Theme" uid="uid://bqyj1wg1d60aa" path="res://Themes/Start_Button.tres" id="3_vxsvj"]
+
+[node name="Start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_7xpsj")
+
+[node name="Border" type="ColorRect" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_vertical = 5
+color = Color(0.133333, 0.0901961, 0.478431, 1)
+
+[node name="BorderMargin" type="MarginContainer" parent="Border"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Fill" type="ColorRect" parent="Border/BorderMargin"]
+layout_mode = 2
+size_flags_vertical = 5
+color = Color(0.901961, 0.913725, 0.686275, 1)
+
+[node name="FillMargin" type="MarginContainer" parent="Border/BorderMargin/Fill"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Border/BorderMargin/Fill/FillMargin"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Border/BorderMargin/Fill/FillMargin/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.376471, 0.368627, 0.631373, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Border/BorderMargin/Fill/FillMargin/VBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="ColorRect" type="ColorRect" parent="Border/BorderMargin/Fill/FillMargin/VBoxContainer/ColorRect/MarginContainer"]
+layout_mode = 2
+color = Color(0.901961, 0.913725, 0.686275, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Border/BorderMargin/Fill/FillMargin/VBoxContainer/ColorRect/MarginContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Border/BorderMargin/Fill/FillMargin/VBoxContainer/ColorRect/MarginContainer/ColorRect/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("2_qoafn")
+theme_override_colors/default_color = Color(0.556863, 0.639216, 0.65098, 1)
+theme_override_colors/font_shadow_color = Color(0.133333, 0.0901961, 0.478431, 1)
+theme_override_constants/shadow_outline_size = 11
+theme_override_font_sizes/normal_font_size = 121
+bbcode_enabled = true
+text = "[center]Solitaire"
+
+[node name="MarginContainer" type="MarginContainer" parent="Border/BorderMargin/Fill/FillMargin/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 420
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 420
+theme_override_constants/margin_bottom = 100
+
+[node name="ColorRect" type="ColorRect" parent="Border/BorderMargin/Fill/FillMargin/VBoxContainer/MarginContainer"]
+layout_mode = 2
+color = Color(0.556863, 0.639216, 0.65098, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Border/BorderMargin/Fill/FillMargin/VBoxContainer/MarginContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="StartGameButton" type="Button" parent="Border/BorderMargin/Fill/FillMargin/VBoxContainer/MarginContainer/ColorRect/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("3_vxsvj")
+theme_override_colors/font_color = Color(0.133333, 0.0901961, 0.478431, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 38
+text = "START"
+
+[connection signal="button_up" from="Border/BorderMargin/Fill/FillMargin/VBoxContainer/MarginContainer/ColorRect/MarginContainer/StartGameButton" to="." method="_on_start_game_button_button_up"]

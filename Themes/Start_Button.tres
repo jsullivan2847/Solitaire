@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bqyj1wg1d60aa"]
+
+[ext_resource type="FontFile" uid="uid://cpdii0ck7rem7" path="res://Assets/Fonts/bitstream-iowan-old-style-bt-586c36a8d7712.ttf" id="1_18qvy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0xkj"]
+bg_color = Color(0.133333, 0.0901961, 0.411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_updpo"]
+bg_color = Color(0.133333, 0.0901961, 0.478431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5irb"]
+bg_color = Color(0.376471, 0.368627, 0.631373, 1)
+
+[resource]
+Button/fonts/font = ExtResource("1_18qvy")
+Button/styles/hover = SubResource("StyleBoxFlat_s0xkj")
+Button/styles/normal = SubResource("StyleBoxFlat_updpo")
+Button/styles/pressed = SubResource("StyleBoxFlat_s5irb")

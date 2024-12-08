@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://f1vv4pwdptso"]
+
+[ext_resource type="FontFile" uid="uid://b4iennww4cx36" path="res://Assets/Fonts/bitstream-iowan-old-style-bold-bt-586c371d8d669.ttf" id="1_d8kjt"]
+[ext_resource type="FontFile" uid="uid://b6lwujl627eot" path="res://Assets/Fonts/bitstream-iowan-old-style-bold-italic-bt-586c37701cb62.ttf" id="2_1tyuu"]
+[ext_resource type="FontFile" uid="uid://mdbeg1uixwio" path="res://Assets/Fonts/bitstream-iowan-old-style-italic-bt-586c3740dc396.ttf" id="3_mwmao"]
+[ext_resource type="FontFile" uid="uid://cpdii0ck7rem7" path="res://Assets/Fonts/bitstream-iowan-old-style-bt-586c36a8d7712.ttf" id="4_qc42u"]
+
+[resource]
+RichTextLabel/colors/font_shadow_color = Color(1, 1, 1, 1)
+RichTextLabel/font_sizes/normal_font_size = 37
+RichTextLabel/fonts/bold_font = ExtResource("1_d8kjt")
+RichTextLabel/fonts/bold_italics_font = ExtResource("2_1tyuu")
+RichTextLabel/fonts/italics_font = ExtResource("3_mwmao")
+RichTextLabel/fonts/normal_font = ExtResource("4_qc42u")
