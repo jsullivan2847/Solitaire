@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfucr4nqxjtaf"]
+
+[ext_resource type="PackedScene" uid="uid://cfsdlqedrek2g" path="res://Scenes/Card/Card.tscn" id="1_jg0qn"]
+
+[node name="AcePiles" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="pile_0" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Card" parent="HBoxContainer/pile_0" instance=ExtResource("1_jg0qn")]
+
+[node name="pile_1" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Card" parent="HBoxContainer/pile_1" instance=ExtResource("1_jg0qn")]
+
+[node name="pile_2" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Card" parent="HBoxContainer/pile_2" instance=ExtResource("1_jg0qn")]
+
+[node name="pile_3" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Card" parent="HBoxContainer/pile_3" instance=ExtResource("1_jg0qn")]

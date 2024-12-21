@@ -1,5 +1,7 @@
 extends Control
 
+var gameplay  = preload("res://Scenes/GamePlay/GamePlay.tscn")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,4 +16,4 @@ func _process(delta):
 
 
 func _on_start_game_button_button_up():
-	get_tree().paused = true
+	get_tree().change_scene_to_packed(gameplay)

@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://d7wuymwy41ed"]
+
+[ext_resource type="Script" path="res://Deck.gd" id="1_lteoc"]
+[ext_resource type="PackedScene" uid="uid://c68yx1lhawiho" path="res://Scenes/Deck/PersonalDeck/personal_deck.tscn" id="2_ot2df"]
+[ext_resource type="PackedScene" uid="uid://cx5xcosn2t0ex" path="res://Scenes/Deck/PersonalPiles/PersonalPiles.tscn" id="3_405tc"]
+[ext_resource type="PackedScene" uid="uid://bfucr4nqxjtaf" path="res://Scenes/Deck/AcePiles/AcePiles.tscn" id="4_6d0q4"]
+
+[node name="Deck" type="MarginContainer" node_paths=PackedStringArray("personal_deck", "personal_piles")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_lteoc")
+personal_deck = NodePath("VBoxContainer/HBoxContainer/PersonalDeck")
+personal_piles = NodePath("VBoxContainer/PersonalPiles")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="PersonalPiles" parent="VBoxContainer" instance=ExtResource("3_405tc")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PersonalDeck" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_ot2df")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AcePiles" parent="VBoxContainer/HBoxContainer" instance=ExtResource("4_6d0q4")]
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="Space" type="Control" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(13.01, 2.08165e-12)
+layout_mode = 2
+size_flags_horizontal = 8
